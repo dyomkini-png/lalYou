@@ -1,7 +1,6 @@
 .inventory {
   background: #1a0835;
   padding: 12px 10px;
-  flex: 1;
 }
 
 .filterRow {
@@ -26,6 +25,10 @@
   box-shadow: 0 0 10px rgba(160, 80, 220, 0.3);
 }
 
+.allGiftsBtn:hover {
+  box-shadow: 0 0 16px rgba(160, 80, 220, 0.5);
+}
+
 .popularBtn {
   display: flex;
   align-items: center;
@@ -40,15 +43,20 @@
   cursor: pointer;
 }
 
+.popularBtn:hover {
+  border-color: #7a40c0;
+}
+
 .starIcon {
   width: 14px;
   height: 14px;
   object-fit: contain;
 }
 
-.filterIconWrap {
-  font-size: 14px;
-  opacity: 0.8;
+.filterIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 .grid {
@@ -57,7 +65,7 @@
   gap: 8px;
 }
 
-/* Bottom bar */
+/* Bottom selection bar */
 .bottomBar {
   display: flex;
   gap: 8px;
@@ -80,7 +88,9 @@
   transition: background 0.15s;
 }
 
-.cancelBtn:hover { background: #4a1080; }
+.cancelBtn:hover {
+  background: #4a1080;
+}
 
 .takeBtn {
   flex: 1;
@@ -95,7 +105,9 @@
   transition: opacity 0.15s;
 }
 
-.takeBtn:hover { opacity: 0.9; }
+.takeBtn:hover {
+  opacity: 0.9;
+}
 
 .sellBtn {
   flex: 1;
@@ -114,11 +126,13 @@
   transition: opacity 0.15s;
 }
 
-.sellBtn:hover { opacity: 0.9; }
+.sellBtn:hover {
+  opacity: 0.9;
+}
 
-.coinIcon {
-  width: 16px;
-  height: 16px;
+.sellCoin {
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
@@ -130,8 +144,28 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  flex: 1;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.emptyBgImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.emptyContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 
 .emptyAdd {
@@ -147,8 +181,30 @@
   gap: 6px;
 }
 
-.emptyPlus { font-size: 40px; color: #9060c0; font-weight: 300; }
-.emptyLabel { font-size: 11px; color: #9060c0; }
-.emptyTitle { font-size: 22px; font-weight: 800; color: #fff; }
-.emptyText { font-size: 14px; color: #c090ff; line-height: 1.7; }
-.emptyLink { color: #a060ff; }
+.emptyPlus {
+  font-size: 40px;
+  color: #9060c0;
+  font-weight: 300;
+}
+
+.emptyLabel {
+  font-size: 11px;
+  color: #9060c0;
+}
+
+.emptyTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: #c090ff;
+  line-height: 1.7;
+}
+
+.emptyLink {
+  color: #60d0ff;
+  text-decoration: underline;
+}

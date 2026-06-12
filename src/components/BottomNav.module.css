@@ -1,8 +1,9 @@
 .nav {
   display: flex;
-  background: #120830;
+  background: linear-gradient(180deg, #1a0a3e 0%, #120830 100%);
   border-top: 1px solid #2a1050;
-  padding: 6px 4px 10px;
+  padding: 6px 2px 10px;
+  flex-shrink: 0;
 }
 
 .navItem {
@@ -29,16 +30,18 @@
   color: #fff;
 }
 
-.active .icon {
-  background: rgba(80, 30, 140, 0.8);
-  border-radius: 10px;
+.iconWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 4px 8px;
+  border-radius: 10px;
+  transition: background 0.2s;
 }
 
-.icon {
-  font-size: 20px;
-  line-height: 1;
-  padding: 4px 8px;
+.active .iconWrap {
+  background: rgba(80, 30, 140, 0.6);
 }
 
 .label {
@@ -48,8 +51,8 @@
 
 .badge {
   position: absolute;
-  top: 2px;
-  right: 8px;
+  top: -2px;
+  right: -4px;
   background: #e03030;
   color: #fff;
   font-size: 9px;
@@ -58,4 +61,5 @@
   padding: 1px 4px;
   min-width: 16px;
   text-align: center;
+  line-height: 1.2;
 }

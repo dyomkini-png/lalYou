@@ -27,17 +27,20 @@ export default function Inventory() {
   if (isEmpty) {
     return (
       <div className={styles.empty}>
-        <div className={styles.emptyAdd}>
-          <span className={styles.emptyPlus}>+</span>
-          <span className={styles.emptyLabel}>Добавить<br/>свой подарок</span>
+        <img src="/assets/empty-bg.png" className={styles.emptyBgImg} alt="" />
+        <div className={styles.emptyContent}>
+          <div className={styles.emptyAdd}>
+            <span className={styles.emptyPlus}>+</span>
+            <span className={styles.emptyLabel}>Добавить<br/>свой подарок</span>
+          </div>
+          <h2 className={styles.emptyTitle}>В твоем инвентаре пусто</h2>
+          <p className={styles.emptyText}>
+            Получай подарки за игру в режимы<br/>
+            или закидывай свои в бота{' '}
+            <a href="#" className={styles.emptyLink}>@momtis*</a>
+            {' '}и обменивай на баланс
+          </p>
         </div>
-        <h2 className={styles.emptyTitle}>В твоем инвентаре пусто</h2>
-        <p className={styles.emptyText}>
-          Получай подарки за игру в режимы<br/>
-          или закидывай свои в бота{' '}
-          <a href="#" className={styles.emptyLink}>@momtis*</a>
-          {' '}и обменивай на баланс
-        </p>
       </div>
     );
   }
@@ -47,12 +50,12 @@ export default function Inventory() {
       <div className={styles.inventory}>
         <div className={styles.filterRow}>
           <button className={styles.allGiftsBtn}>
-            <img src="/assets/star.png" alt="★" className={styles.starIcon} />
+            <img src="/assets/star-icon.png" alt="" className={styles.starIcon} />
             Все подарки
           </button>
           <button className={styles.popularBtn}>
             Popular
-            <img src="/assets/coin-icon.png" alt="filter" className={styles.filterIcon} />
+            <img src="/assets/filter-icon.png" alt="" className={styles.filterIcon} />
           </button>
         </div>
 
@@ -75,7 +78,7 @@ export default function Inventory() {
           <button className={styles.takeBtn}>Забрать {selected.size} подарка</button>
           <button className={styles.sellBtn}>
             Продать за
-            <img src="/assets/coin-icon.png" alt="coin" className={styles.coinIcon} />
+            <img src="/assets/coins-badge.png" alt="" className={styles.sellCoin} />
             {totalCoins}
           </button>
         </div>

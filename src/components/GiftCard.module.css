@@ -8,16 +8,24 @@
   align-items: center;
   cursor: pointer;
   position: relative;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.15s;
   aspect-ratio: 1;
   overflow: hidden;
 }
 
-.card:hover { border-color: #7a40c0; }
+.card:hover {
+  border-color: #7a40c0;
+  transform: scale(1.02);
+}
+
+.card:active {
+  transform: scale(0.97);
+}
 
 .selected {
   border-color: #c060ff;
   background: rgba(80, 30, 140, 0.9);
+  box-shadow: 0 0 12px rgba(192, 96, 255, 0.3);
 }
 
 .plushCard {
@@ -39,6 +47,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  transition: all 0.15s;
 }
 
 .checked {
@@ -116,10 +125,13 @@
   gap: 6px;
   cursor: pointer;
   aspect-ratio: 1;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 
-.addCard:hover { border-color: #9060d0; }
+.addCard:hover {
+  border-color: #9060d0;
+  background: rgba(60, 25, 110, 0.6);
+}
 
 .plus {
   font-size: 38px;

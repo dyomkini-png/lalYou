@@ -4,7 +4,7 @@ export default function ChatBubble({ sender, message }) {
   return (
     <div className={styles.bubble}>
       <div className={styles.avatar}>
-        <img src="/assets/tg-link.png" alt="avatar" className={styles.avatarImg} />
+        <img src="/assets/chat-bubble-bg.png" alt="" className={styles.avatarBg} />
       </div>
       <div className={styles.content}>
         <span className={styles.name}>{sender}</span>

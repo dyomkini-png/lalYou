@@ -1,13 +1,34 @@
+.tabsWrap {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.chainLeft,
+.chainRight {
+  position: absolute;
+  top: -18px;
+  z-index: 3;
+  opacity: 0.6;
+}
+
+.chainLeft {
+  left: 8px;
+}
+
+.chainRight {
+  right: 8px;
+}
+
 .tabs {
   display: flex;
-  background: #1a0a3e;
+  background: linear-gradient(180deg, #2a1060 0%, #1a0a3e 100%);
   border-bottom: 2px solid #3a1870;
-  position: relative;
 }
 
 .tab {
   flex: 1;
-  padding: 11px 6px;
+  padding: 12px 6px;
   background: none;
   border: none;
   color: #7050a0;
@@ -18,7 +39,9 @@
   position: relative;
 }
 
-.tab:hover { color: #c090ff; }
+.tab:hover {
+  color: #c090ff;
+}
 
 .active {
   color: #fff;

@@ -5,6 +5,7 @@ import Inventory from './components/Inventory';
 import Referral from './components/Referral';
 import Tasks from './components/Tasks';
 import ChatBubble from './components/ChatBubble';
+import BottomNav from './components/BottomNav';
 import './App.css';
 
 const PLAYER = {
@@ -18,6 +19,7 @@ const PLAYER = {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('Инвентарь');
+  const [activeNav, setActiveNav] = useState('profile');
 
   return (
     <div className="app">
@@ -34,6 +36,7 @@ export default function App() {
         sender="Player Name"
         message="Hi there! Do you wanna check che wanna chaf wanna..."
       />
+      <BottomNav active={activeNav} onChange={setActiveNav} />
     </div>
   );
 }

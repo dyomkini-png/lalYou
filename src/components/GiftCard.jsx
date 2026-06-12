@@ -23,12 +23,10 @@ export default function GiftCard({ gift, selected, onSelect }) {
       className={`${styles.card} ${selected ? styles.selected : ''} ${isPlush ? styles.plushCard : ''}`}
       onClick={() => onSelect(gift)}
     >
-      {/* Checkbox top-right */}
       <div className={`${styles.checkbox} ${selected ? styles.checked : ''}`}>
         {selected && <span className={styles.checkmark}>✓</span>}
       </div>
 
-      {/* Gift image */}
       <div className={styles.imgWrap}>
         <img
           src={GIFT_IMAGES[gift.image] || GIFT_IMAGES.cauldron}
@@ -37,7 +35,6 @@ export default function GiftCard({ gift, selected, onSelect }) {
         />
       </div>
 
-      {/* Price badge */}
       <div className={styles.priceBadge}>
         <img src="/assets/coins-badge.png" alt="" className={styles.badgeImg} />
         <span className={styles.priceText}>{gift.price}</span>

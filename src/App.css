@@ -16,18 +16,4 @@
   overflow-y: auto;
 }
 
-.footer {
-  background: #0a0618;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 12px;
-  color: #6040a0;
-  border-top: 1px solid #1a0a30;
-}
 
-.footerIcon {
-  font-size: 16px;
-}

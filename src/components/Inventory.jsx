@@ -4,29 +4,25 @@ import GiftModal from './GiftModal';
 import styles from './Inventory.module.css';
 
 const GIFTS = [
-  { id: 1, emoji: '🍀🪙', price: 256, name: '' },
-  { id: 2, emoji: '🧸', price: 256, name: 'Plush Pepe #2760' },
-  { id: 3, emoji: '🍀🪙', price: 256 },
-  { id: 4, emoji: '🍀🪙', price: 256 },
-  { id: 5, emoji: '🍀🪙', price: 256 },
+  { id: 1, image: 'cauldron',  price: 256, name: '' },
+  { id: 2, image: 'plushPepe', price: 256, name: 'Plush Pepe #2760' },
+  { id: 3, image: 'cauldron',  price: 256 },
+  { id: 4, image: 'cauldron2', price: 256 },
+  { id: 5, image: 'cauldron',  price: 256 },
 ];
 
 export default function Inventory() {
   const [selected, setSelected] = useState(new Set());
-  const [filter, setFilter] = useState('all');
   const [modalGift, setModalGift] = useState(null);
   const [isEmpty] = useState(false);
 
   const toggleSelect = (gift) => {
     const next = new Set(selected);
-    if (next.has(gift.id)) next.delete(gift.id);
-    else next.add(gift.id);
+    if (next.has(gift.id)) next.delete(gift.id); else next.add(gift.id);
     setSelected(next);
   };
 
-  const totalCoins = GIFTS
-    .filter(g => selected.has(g.id))
-    .reduce((sum, g) => sum + g.price, 0);
+  const totalCoins = GIFTS.filter(g => selected.has(g.id)).reduce((s, g) => s + g.price, 0);
 
   if (isEmpty) {
     return (
@@ -50,17 +46,13 @@ export default function Inventory() {
     <>
       <div className={styles.inventory}>
         <div className={styles.filterRow}>
-          <button
-            className={`${styles.filterBtn} ${filter === 'all' ? styles.activeFilter : ''}`}
-            onClick={() => setFilter('all')}
-          >
-            ⭐ Все подарки
+          <button className={styles.allGiftsBtn}>
+            <img src="/assets/star.png" alt="★" className={styles.starIcon} />
+            Все подарки
           </button>
-          <button
-            className={`${styles.filterBtn} ${filter === 'popular' ? styles.activeFilter : ''}`}
-            onClick={() => setFilter('popular')}
-          >
-            Popular 🔽
+          <button className={styles.popularBtn}>
+            Popular
+            <img src="/assets/coin-icon.png" alt="filter" className={styles.filterIcon} />
           </button>
         </div>
 
@@ -71,7 +63,7 @@ export default function Inventory() {
               key={gift.id}
               gift={gift}
               selected={selected.has(gift.id)}
-              onSelect={(g) => { setModalGift(g); }}
+              onSelect={(g) => setModalGift(g)}
             />
           ))}
         </div>
@@ -82,7 +74,9 @@ export default function Inventory() {
           <button className={styles.cancelBtn} onClick={() => setSelected(new Set())}>✕</button>
           <button className={styles.takeBtn}>Забрать {selected.size} подарка</button>
           <button className={styles.sellBtn}>
-            Продать за <span className={styles.coinIcon}>🪙</span> {totalCoins}
+            Продать за
+            <img src="/assets/coin-icon.png" alt="coin" className={styles.coinIcon} />
+            {totalCoins}
           </button>
         </div>
       )}
@@ -91,8 +85,8 @@ export default function Inventory() {
         <GiftModal
           gift={modalGift}
           onClose={() => setModalGift(null)}
-          onTake={() => { setModalGift(null); toggleSelect(modalGift); }}
-          onSell={() => { setModalGift(null); }}
+          onTake={() => { toggleSelect(modalGift); setModalGift(null); }}
+          onSell={() => setModalGift(null)}
         />
       )}
     </>

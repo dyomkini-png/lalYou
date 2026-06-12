@@ -1,60 +1,62 @@
 .card {
-  background: rgba(50, 20, 100, 0.7);
+  background: rgba(50, 20, 100, 0.75);
   border: 2px solid #3a1870;
   border-radius: 14px;
-  padding: 10px 8px;
+  padding: 10px 8px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   cursor: pointer;
   position: relative;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s;
   aspect-ratio: 1;
-  min-height: 110px;
 }
 
-.card:hover {
-  border-color: #7a40c0;
-}
+.card:hover { border-color: #7a40c0; }
 
 .selected {
   border-color: #c060ff;
-  background: rgba(80, 30, 140, 0.8);
+  background: rgba(80, 30, 140, 0.85);
 }
 
 .checkbox {
   position: absolute;
   top: 6px;
   right: 6px;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 2px solid #5a3090;
   background: #2a1050;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  color: #fff;
 }
 
 .checked {
-  background: #5adf80;
-  border-color: #5adf80;
+  background: transparent;
+  border-color: transparent;
+}
+
+.checkImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .giftImg {
-  font-size: 44px;
-  line-height: 1;
-  margin-top: 4px;
+  width: 80%;
+  max-height: 70px;
+  object-fit: contain;
+  flex: 1;
 }
 
 .price {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.45);
   border-radius: 12px;
   padding: 2px 8px;
   font-size: 13px;
@@ -63,7 +65,9 @@
 }
 
 .coinIcon {
-  font-size: 12px;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .giftName {
@@ -85,13 +89,10 @@
   gap: 6px;
   cursor: pointer;
   aspect-ratio: 1;
-  min-height: 110px;
   transition: border-color 0.2s;
 }
 
-.addCard:hover {
-  border-color: #9060d0;
-}
+.addCard:hover { border-color: #9060d0; }
 
 .plus {
   font-size: 36px;

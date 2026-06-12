@@ -1,7 +1,7 @@
 import styles from './GiftCard.module.css';
 
 const GIFT_IMAGES = {
-  cauldron: '/assets/gift-cauldron.png',
+  cauldron:  '/assets/gift-cauldron.png',
   cauldron2: '/assets/gift-cauldron2.png',
   plushPepe: '/assets/gift-plush-pepe.png',
 };
@@ -16,23 +16,33 @@ export default function GiftCard({ gift, selected, onSelect }) {
     );
   }
 
+  const isPlush = gift.image === 'plushPepe';
+
   return (
     <div
-      className={`${styles.card} ${selected ? styles.selected : ''}`}
+      className={`${styles.card} ${selected ? styles.selected : ''} ${isPlush ? styles.plushCard : ''}`}
       onClick={() => onSelect(gift)}
     >
+      {/* Checkbox top-right */}
       <div className={`${styles.checkbox} ${selected ? styles.checked : ''}`}>
-        {selected && <img src="/assets/checkbox-checked.png" alt="✓" className={styles.checkImg} />}
+        {selected && <span className={styles.checkmark}>✓</span>}
       </div>
-      <img
-        src={GIFT_IMAGES[gift.image] || GIFT_IMAGES.cauldron}
-        alt={gift.name || 'gift'}
-        className={styles.giftImg}
-      />
-      <div className={styles.price}>
-        <img src="/assets/coin-icon.png" alt="coin" className={styles.coinIcon} />
-        <span>{gift.price}</span>
+
+      {/* Gift image */}
+      <div className={styles.imgWrap}>
+        <img
+          src={GIFT_IMAGES[gift.image] || GIFT_IMAGES.cauldron}
+          alt={gift.name || 'gift'}
+          className={styles.giftImg}
+        />
       </div>
+
+      {/* Price badge */}
+      <div className={styles.priceBadge}>
+        <img src="/assets/coins-badge.png" alt="" className={styles.badgeImg} />
+        <span className={styles.priceText}>{gift.price}</span>
+      </div>
+
       {gift.name && <div className={styles.giftName}>{gift.name}</div>}
     </div>
   );

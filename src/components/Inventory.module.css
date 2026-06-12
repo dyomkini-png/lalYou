@@ -1,6 +1,6 @@
 .inventory {
-  background: linear-gradient(180deg, #1e0a40 0%, #16082e 100%);
-  padding: 12px;
+  background: #1a0835;
+  padding: 12px 10px;
   flex: 1;
 }
 
@@ -15,24 +15,25 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(70, 25, 130, 0.9);
-  border: 2px solid #9060d0;
+  background: rgba(80, 30, 150, 0.95);
+  border: 2px solid #a060e0;
   border-radius: 20px;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
   padding: 7px 16px;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(160, 80, 220, 0.3);
 }
 
 .popularBtn {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(50, 20, 90, 0.7);
-  border: 2px solid #4a2080;
+  background: rgba(40, 15, 85, 0.8);
+  border: 2px solid #5a2890;
   border-radius: 20px;
-  color: #c090ff;
+  color: #d0a0ff;
   font-size: 13px;
   font-weight: 600;
   padding: 7px 16px;
@@ -45,11 +46,9 @@
   object-fit: contain;
 }
 
-.filterIcon {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-  opacity: 0.7;
+.filterIconWrap {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 .grid {
@@ -63,41 +62,47 @@
   display: flex;
   gap: 8px;
   padding: 10px 12px;
-  background: linear-gradient(180deg, #1a0a3e 0%, #120830 100%);
-  border-top: 1px solid #3a1870;
+  background: #120828;
+  border-top: 1px solid #2a1050;
   align-items: center;
 }
 
 .cancelBtn {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background: #3a1060;
+  background: #2a0a50;
   border: 2px solid #5a2090;
   color: #fff;
   font-size: 18px;
   cursor: pointer;
   flex-shrink: 0;
+  transition: background 0.15s;
 }
+
+.cancelBtn:hover { background: #4a1080; }
 
 .takeBtn {
   flex: 1;
-  padding: 12px 8px;
+  padding: 13px 8px;
   background: linear-gradient(90deg, #d060ff, #9030e0);
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  transition: opacity 0.15s;
 }
+
+.takeBtn:hover { opacity: 0.9; }
 
 .sellBtn {
   flex: 1;
-  padding: 12px 8px;
+  padding: 13px 8px;
   background: linear-gradient(90deg, #40c060, #20a040);
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -106,7 +111,10 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  transition: opacity 0.15s;
 }
+
+.sellBtn:hover { opacity: 0.9; }
 
 .coinIcon {
   width: 16px;
@@ -116,43 +124,31 @@
 
 /* Empty state */
 .empty {
-  background: linear-gradient(180deg, #1e0a40 0%, #16082e 100%);
-  padding: 24px 20px;
+  background: #1a0835;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   flex: 1;
+  text-align: center;
 }
 
 .emptyAdd {
   background: rgba(40, 15, 80, 0.6);
   border: 2px dashed #5a3090;
-  border-radius: 14px;
+  border-radius: 16px;
   width: 120px;
   height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .emptyPlus { font-size: 40px; color: #9060c0; font-weight: 300; }
-.emptyLabel { font-size: 11px; color: #9060c0; text-align: center; }
-
-.emptyTitle {
-  font-size: 22px;
-  font-weight: 800;
-  color: #fff;
-  text-align: center;
-}
-
-.emptyText {
-  font-size: 14px;
-  color: #c090ff;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.emptyLink { color: #a060ff; text-decoration: none; }
+.emptyLabel { font-size: 11px; color: #9060c0; }
+.emptyTitle { font-size: 22px; font-weight: 800; color: #fff; }
+.emptyText { font-size: 14px; color: #c090ff; line-height: 1.7; }
+.emptyLink { color: #a060ff; }

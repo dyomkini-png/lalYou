@@ -1,20 +1,26 @@
 import styles from './GiftModal.module.css';
 
-export default function GiftModal({ gift, onClose, onTake, onSell }) {
-  const imgSrc = gift.image === 'plushPepe'
-    ? '/assets/gift-plush-pepe.png'
-    : '/assets/gift-cauldron-modal.png';
+const GIFT_IMAGES = {
+  cauldron:  '/assets/gift-cauldron.png',
+  cauldron2: '/assets/gift-cauldron2.png',
+  plushPepe: '/assets/gift-plush-pepe.png',
+};
 
+export default function GiftModal({ gift, onClose, onTake, onSell }) {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeBtn} onClick={onClose}>✕</button>
 
         <div className={styles.giftDisplay}>
-          <img src={imgSrc} alt="gift" className={styles.giftImg} />
-          <div className={styles.giftPrice}>
-            <img src="/assets/coin-icon.png" alt="coin" className={styles.coinIcon} />
-            <span>{gift.price}</span>
+          <img
+            src={GIFT_IMAGES[gift.image] || GIFT_IMAGES.cauldron}
+            alt="gift"
+            className={styles.giftImg}
+          />
+          <div className={styles.priceBadge}>
+            <img src="/assets/coins-badge.png" alt="" className={styles.badgeImg} />
+            <span className={styles.priceText}>{gift.price}</span>
           </div>
         </div>
 
@@ -23,8 +29,8 @@ export default function GiftModal({ gift, onClose, onTake, onSell }) {
         </button>
         <button className={styles.sellBtn} onClick={onSell}>
           Продать за
-          <img src="/assets/coin-icon.png" alt="coin" className={styles.coinIcon} />
-          {gift.price}
+          <img src="/assets/coins-badge.png" alt="" className={styles.sellBadge} />
+          <span>{gift.price}</span>
         </button>
       </div>
     </div>

@@ -31,10 +31,11 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  background: rgba(20, 8, 50, 0.8);
-  border: 1px solid #4a2080;
+  background: linear-gradient(135deg, rgba(30, 12, 60, 0.9) 0%, rgba(20, 8, 45, 0.95) 100%);
+  border: 1px solid #5a2890;
   border-radius: 20px;
   padding: 4px 10px 4px 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .coinIcon {
@@ -122,11 +123,12 @@
 }
 
 .playerName {
-  background: linear-gradient(90deg, #c060ff, #8030e0);
+  background: linear-gradient(90deg, #d060ff 0%, #a040e0 50%, #8030e0 100%);
   border-radius: 20px;
-  padding: 3px 14px;
+  padding: 4px 16px;
   font-size: 11px;
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(160, 60, 255, 0.4);
 }

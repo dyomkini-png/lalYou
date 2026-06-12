@@ -10,7 +10,7 @@
 }
 
 .modal {
-  background: linear-gradient(180deg, #5a1a9a 0%, #2e0a68 100%);
+  background: linear-gradient(180deg, #5a1a9a 0%, #3a1070 50%, #2e0a68 100%);
   border-radius: 20px;
   padding: 24px 20px 20px;
   width: 100%;
@@ -19,8 +19,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 2px solid #8040c0;
-  box-shadow: 0 0 50px rgba(120, 60, 200, 0.6);
+  border: 2px solid #7040b0;
+  box-shadow: 0 0 60px rgba(120, 60, 200, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .closeBtn {
@@ -43,9 +43,10 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 20px 10px;
-  background: rgba(90, 40, 160, 0.5);
+  padding: 24px 10px;
+  background: linear-gradient(180deg, rgba(100, 50, 180, 0.6) 0%, rgba(70, 30, 130, 0.5) 100%);
   border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .giftImg {
@@ -75,21 +76,24 @@
 .takeBtn {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(90deg, #d060ff, #9030e0);
+  background: linear-gradient(90deg, #e060ff 0%, #c040e0 50%, #9030e0 100%);
   border: none;
   border-radius: 14px;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(180, 60, 255, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.takeBtn:hover { opacity: 0.9; }
+.takeBtn:hover { opacity: 0.92; transform: translateY(-1px); }
+.takeBtn:active { transform: translateY(0); }
 
 .sellBtn {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(90deg, #40c060, #20a040);
+  background: linear-gradient(90deg, #50d070 0%, #40c060 50%, #20a040 100%);
   border: none;
   border-radius: 14px;
   color: #fff;
@@ -100,6 +104,9 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  box-shadow: 0 4px 12px rgba(60, 180, 80, 0.3);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.sellBtn:hover { opacity: 0.9; }
+.sellBtn:hover { opacity: 0.92; transform: translateY(-1px); }
+.sellBtn:active { transform: translateY(0); }

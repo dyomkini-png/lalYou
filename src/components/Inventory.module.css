@@ -63,7 +63,7 @@
   display: flex;
   gap: 8px;
   padding: 10px 12px;
-  background: #1a0a3e;
+  background: linear-gradient(180deg, #1a0a3e 0%, #120830 100%);
   border-top: 1px solid #3a1870;
   align-items: center;
 }

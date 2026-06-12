@@ -1,5 +1,5 @@
 .card {
-  background: rgba(50, 20, 100, 0.75);
+  background: linear-gradient(180deg, rgba(60, 25, 120, 0.85) 0%, rgba(40, 15, 80, 0.9) 100%);
   border: 2px solid #3a1870;
   border-radius: 14px;
   padding: 10px 8px 8px;
@@ -9,7 +9,7 @@
   gap: 6px;
   cursor: pointer;
   position: relative;
-  transition: border-color 0.2s;
+  transition: border-color 0.25s, box-shadow 0.25s;
   aspect-ratio: 1;
 }
 
@@ -17,7 +17,8 @@
 
 .selected {
   border-color: #c060ff;
-  background: rgba(80, 30, 140, 0.85);
+  background: linear-gradient(180deg, rgba(100, 40, 180, 0.9) 0%, rgba(70, 25, 130, 0.95) 100%);
+  box-shadow: 0 0 16px rgba(180, 80, 255, 0.4);
 }
 
 .checkbox {
@@ -35,8 +36,8 @@
 }
 
 .checked {
-  background: transparent;
-  border-color: transparent;
+  background: #30c060;
+  border-color: #30c060;
 }
 
 .checkImg {
@@ -50,6 +51,7 @@
   max-height: 70px;
   object-fit: contain;
   flex: 1;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
 }
 
 .price {

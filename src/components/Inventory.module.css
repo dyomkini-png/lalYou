@@ -8,24 +8,48 @@
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
+  align-items: center;
 }
 
-.filterBtn {
+.allGiftsBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(70, 25, 130, 0.9);
+  border: 2px solid #9060d0;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+
+.popularBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   background: rgba(50, 20, 90, 0.7);
   border: 2px solid #4a2080;
   border-radius: 20px;
   color: #c090ff;
   font-size: 13px;
   font-weight: 600;
-  padding: 6px 14px;
+  padding: 7px 16px;
   cursor: pointer;
-  transition: all 0.2s;
 }
 
-.activeFilter {
-  background: rgba(80, 30, 140, 0.9);
-  border-color: #9060d0;
-  color: #fff;
+.starIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.filterIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  opacity: 0.7;
 }
 
 .grid {
@@ -54,11 +78,6 @@
   font-size: 18px;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background 0.2s;
-}
-
-.cancelBtn:hover {
-  background: #5a2090;
 }
 
 .takeBtn {
@@ -71,11 +90,6 @@
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.takeBtn:hover {
-  opacity: 0.9;
 }
 
 .sellBtn {
@@ -91,22 +105,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  transition: opacity 0.2s;
-}
-
-.sellBtn:hover {
-  opacity: 0.9;
+  gap: 5px;
 }
 
 .coinIcon {
-  font-size: 14px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 /* Empty state */
 .empty {
   background: linear-gradient(180deg, #1e0a40 0%, #16082e 100%);
-  padding: 20px 16px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,8 +129,8 @@
   background: rgba(40, 15, 80, 0.6);
   border: 2px dashed #5a3090;
   border-radius: 14px;
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,17 +138,8 @@
   gap: 4px;
 }
 
-.emptyPlus {
-  font-size: 36px;
-  color: #9060c0;
-  font-weight: 300;
-}
-
-.emptyLabel {
-  font-size: 11px;
-  color: #9060c0;
-  text-align: center;
-}
+.emptyPlus { font-size: 40px; color: #9060c0; font-weight: 300; }
+.emptyLabel { font-size: 11px; color: #9060c0; text-align: center; }
 
 .emptyTitle {
   font-size: 22px;
@@ -153,7 +155,4 @@
   line-height: 1.6;
 }
 
-.emptyLink {
-  color: #a060ff;
-  text-decoration: none;
-}
+.emptyLink { color: #a060ff; text-decoration: none; }

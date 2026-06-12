@@ -3,47 +3,33 @@ import styles from './ProfileHeader.module.css';
 export default function ProfileHeader({ player }) {
   return (
     <div className={styles.profileHeader}>
-      <h1 className={styles.pageTitle}>Профиль</h1>
+      {/* Background */}
+      <img src="/assets/bg.png" className={styles.bgImage} alt="" />
 
-      <div className={styles.statsRow}>
-        <div className={styles.statLeft}>
-          <div className={styles.statBadge}>
-            <span className={styles.statValue}>{player.shovels}</span>
-            <span className={styles.statLabel}>Лопат<br/>отправил</span>
+      <div className={styles.inner}>
+        {/* Top controls */}
+        <div className={styles.topControls}>
+          <div className={styles.coinsBlock}>
+            <img src="/assets/coin-icon.png" alt="coin" className={styles.coinIcon} />
+            <span className={styles.coinCount}>{player.coins}</span>
+            <button className={styles.addBtn}>+</button>
           </div>
-          <div className={styles.regDate}>
-            <span className={styles.dateValue}>{player.regDate}</span>
-            <span className={styles.dateLabel}>Дата<br/>регистрации</span>
+          <h1 className={styles.pageTitle}>Профиль</h1>
+          <div className={styles.rightControls}>
+            <button className={styles.langBtn}>RU</button>
+            <button className={styles.menuBtn}>☰</button>
           </div>
         </div>
 
-        <div className={styles.avatarBlock}>
-          <div className={styles.avatar}>
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-              <circle cx="30" cy="30" r="30" fill="#2a1050"/>
-              <circle cx="30" cy="22" r="12" fill="#4a3070"/>
-              <ellipse cx="30" cy="50" rx="18" ry="12" fill="#4a3070"/>
-            </svg>
-          </div>
-          <div className={styles.playerName}>{player.name}</div>
-          <div className={styles.playerEmoji}>🔮</div>
-        </div>
-
-        <div className={styles.statRight}>
-          <div className={styles.statBadge}>
-            <span className={styles.statValue}>{player.graves}</span>
-            <span className={styles.statLabel}>Могил<br/>откопал</span>
-          </div>
-          <div className={styles.statBadge}>
-            <span className={styles.statValue}>{player.gifts}</span>
-            <span className={styles.statLabel}>Подарков<br/>вывел</span>
+        {/* Stats row image — covers the whole stats section */}
+        <div className={styles.statsWrapper}>
+          <img src="/assets/profile-stats-row.png" alt="profile stats" className={styles.statsRowImg} />
+          {/* Avatar overlay */}
+          <div className={styles.avatarOverlay}>
+            <img src="/assets/avatar-frame.png" alt="avatar" className={styles.avatarFrame} />
+            <div className={styles.playerName}>{player.name}</div>
           </div>
         </div>
-      </div>
-
-      <div className={styles.controls}>
-        <button className={styles.langBtn}>RU</button>
-        <button className={styles.menuBtn}>☰</button>
       </div>
     </div>
   );

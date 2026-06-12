@@ -7,10 +7,10 @@
 
 .tab {
   flex: 1;
-  padding: 10px 6px;
+  padding: 11px 6px;
   background: none;
   border: none;
-  color: #8060b0;
+  color: #7050a0;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -18,9 +18,7 @@
   position: relative;
 }
 
-.tab:hover {
-  color: #c090ff;
-}
+.tab:hover { color: #c090ff; }
 
 .active {
   color: #fff;
@@ -35,14 +33,4 @@
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, #c060ff, #8030e0);
-}
-
-.chainDecor {
-  position: absolute;
-  right: -4px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  opacity: 0.4;
-  pointer-events: none;
 }

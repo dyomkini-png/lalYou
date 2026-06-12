@@ -1,0 +1,49 @@
+import { useState } from 'react';
+import Header from './components/Header';
+import ProfileHeader from './components/ProfileHeader';
+import Tabs from './components/Tabs';
+import Inventory from './components/Inventory';
+import Referral from './components/Referral';
+import Tasks from './components/Tasks';
+import ChatBubble from './components/ChatBubble';
+import BottomNav from './components/BottomNav';
+import './App.css';
+
+const PLAYER = {
+  name: 'Player name long',
+  coins: 256,
+  shovels: 6,
+  graves: 100,
+  gifts: 6,
+  regDate: '12.20.1933',
+};
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState('Инвентарь');
+  const [activeNav, setActiveNav] = useState('profile');
+
+  return (
+    <div className="app">
+      <Header coins={PLAYER.coins} />
+      <ProfileHeader player={PLAYER} />
+      <Tabs active={activeTab} onChange={setActiveTab} />
+
+      <div className="content">
+        {activeTab === 'Инвентарь' && <Inventory />}
+        {activeTab === 'Рефералка' && <Referral />}
+        {activeTab === 'Задания' && <Tasks />}
+      </div>
+
+      <ChatBubble
+        sender="Player Name"
+        message="Hi there! Do you wanna check che wanna chaf wanna..."
+      />
+      <BottomNav active={activeNav} onChange={setActiveNav} />
+
+      <footer className="footer">
+        <span>@graveyard_partys</span>
+        <span className="footerIcon">↻</span>
+      </footer>
+    </div>
+  );
+}

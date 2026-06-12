@@ -1,0 +1,61 @@
+.container {
+  background: linear-gradient(180deg, #1e0a40 0%, #16082e 100%);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(50, 20, 100, 0.7);
+  border: 2px solid #3a1870;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.done {
+  opacity: 0.6;
+}
+
+.taskInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.taskTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.taskReward {
+  font-size: 12px;
+  color: #ffd700;
+}
+
+.claimBtn {
+  background: linear-gradient(90deg, #d060ff, #9030e0);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.doneBtn {
+  background: #2a5a30;
+  border: none;
+  border-radius: 8px;
+  color: #5adf80;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 14px;
+  cursor: default;
+}

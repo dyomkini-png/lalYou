@@ -1,0 +1,108 @@
+.card {
+  background: rgba(50, 20, 100, 0.7);
+  border: 2px solid #3a1870;
+  border-radius: 14px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s, background 0.2s;
+  aspect-ratio: 1;
+  min-height: 110px;
+}
+
+.card:hover {
+  border-color: #7a40c0;
+}
+
+.selected {
+  border-color: #c060ff;
+  background: rgba(80, 30, 140, 0.8);
+}
+
+.checkbox {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #5a3090;
+  background: #2a1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+.checked {
+  background: #5adf80;
+  border-color: #5adf80;
+}
+
+.giftImg {
+  font-size: 44px;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.coinIcon {
+  font-size: 12px;
+}
+
+.giftName {
+  font-size: 9px;
+  color: #c090ff;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Add card */
+.addCard {
+  background: rgba(40, 15, 80, 0.6);
+  border: 2px dashed #5a3090;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  min-height: 110px;
+  transition: border-color 0.2s;
+}
+
+.addCard:hover {
+  border-color: #9060d0;
+}
+
+.plus {
+  font-size: 36px;
+  color: #9060c0;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.addLabel {
+  font-size: 11px;
+  color: #9060c0;
+  text-align: center;
+  line-height: 1.4;
+}

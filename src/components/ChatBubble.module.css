@@ -1,0 +1,42 @@
+.bubble {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(20, 8, 50, 0.95);
+  border-top: 1px solid #2a1050;
+  padding: 8px 12px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #3a1870;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  border: 2px solid #5a2890;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c090ff;
+}
+
+.text {
+  font-size: 11px;
+  color: #9070c0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

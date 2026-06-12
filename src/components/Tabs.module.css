@@ -1,0 +1,48 @@
+.tabs {
+  display: flex;
+  background: #1a0a3e;
+  border-bottom: 2px solid #3a1870;
+  position: relative;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 6px;
+  background: none;
+  border: none;
+  color: #8060b0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.tab:hover {
+  color: #c090ff;
+}
+
+.active {
+  color: #fff;
+  background: linear-gradient(180deg, #3a1870 0%, #1a0a3e 100%);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c060ff, #8030e0);
+}
+
+.chainDecor {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.4;
+  pointer-events: none;
+}
